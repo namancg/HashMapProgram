@@ -14,6 +14,8 @@ public class NodeMain {
 		}
 		System.out.println("frequency of word to is "+myLinkedHashMap.getKey("to"));
 		System.out.println(myLinkedHashMap);
+		myLinkedHashMap.remove("to");
+		System.out.println(myLinkedHashMap);
 
 	}
 
