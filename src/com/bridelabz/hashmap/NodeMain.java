@@ -3,17 +3,17 @@ package com.bridelabz.hashmap;
 public class NodeMain {
 
 	public static void main(String[] args) {
-		String sentence= "To be or not to be";
-		MyHashMap<String, Integer> myHashMap = new MyHashMap<String, Integer>();
+		String sentence= "To be or not to be To be or not to be To be or not to be";
+		MyLinkedHashMap<String, Integer> myLinkedHashMap = new MyLinkedHashMap<String, Integer>();
 		String [] words = sentence.toLowerCase().split(" ");
 		for(String word:words) {
-			Integer value = myHashMap.getKey(word);
+			Integer value = myLinkedHashMap.getKey(word);
 			if(value==null) value=1;
 			else value=value+1;
-			myHashMap.add(word, value);
+			myLinkedHashMap.add(word, value);
 		}
-		System.out.println("frequency of word to is "+myHashMap.getKey("to"));
-		System.out.println(myHashMap);
+		System.out.println("frequency of word to is "+myLinkedHashMap.getKey("to"));
+		System.out.println(myLinkedHashMap);
 
 	}
 
