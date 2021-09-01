@@ -28,6 +28,29 @@ public class LinkedList <K>  {
 			tail.setNextNode(newNode);
 		tail = newNode;
 	}
+	public void delete(K key) {
+		INode currentNode = head,previousNode=null;
+		if(currentNode.getKey().equals(key)) {
+			head = head.getNextNode1();
+			currentNode= null;
+			System.out.println("deleted");
+			return;
+		}
+		while(currentNode!=null) {
+			if(currentNode.getKey().equals(key)) {
+				if(currentNode.getNextNode1()==null) {
+					previousNode.setNextNode(null);
+				}
+				else
+				previousNode.setNextNode(currentNode.getNextNode1());
+				currentNode=null;
+				System.out.println(key+" deleted");
+				break;
+			}
+			previousNode=currentNode;
+			currentNode=currentNode.getNextNode1();
+		}
+	}
 
 	@Override
 	public String toString() {
